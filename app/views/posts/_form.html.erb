@@ -1,0 +1,12 @@
+<div class="container">
+  <%= simple_form_for (@post) do |f| %>
+  <div class="new-form">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </br>
+    <%= f.input :body, :as => :text, :input_html => { 'rows' => 10} %>
+  </div>
+
+  <%= f.submit "Add this blog post", class: "btn btn-primary" %>
+  <% end %>
+</div>
