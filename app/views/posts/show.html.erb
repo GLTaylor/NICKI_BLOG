@@ -1,7 +1,7 @@
 <div class="container">
   <div class="post-body">
     <h1> <%= @post.name %> </h1>
-    <p> Written on <%= Date.today %> </p>
+    <p> Written on <%= @post.created_at %> </p>
     <%= @post.body %>
     </br>
     <%= link_to "Edit this post", edit_post_path(@post) %>

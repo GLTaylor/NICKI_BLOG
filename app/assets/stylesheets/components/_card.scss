@@ -1,4 +1,24 @@
 .card {
   border: 5px solid black;
   margin-bottom: 30px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  grid-auto-flow: dense;
+  }
+
+.card h3 {
+  text-align: center;
+}
+
+.card-holder a:nth-child(3n) {
+  grid-column-end: span 2;
 }

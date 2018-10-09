@@ -1,10 +1,12 @@
   <div class="container">
     <div class="container-home">
-    <ul>
+    <ul class="card-holder">
       <% @posts.each do |post| %>
       <%= link_to post_path(post) do %>
       <li class="card">
-          <%= post.name %>
+          <h3> <%= post.name %> </h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inventore vel quas laboriosam, debitis voluptas quasi. Magnam itaque, consequuntur, vero accusantium vitae asperiores dolore, repellendus possimus, perspiciatis necessitatibus quisquam veritatis! </p>
+          <div> <%= post.created_at %> </div>
       </li>
         <% end %>
       <% end %>
