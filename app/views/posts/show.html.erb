@@ -2,7 +2,7 @@
   <div class="post-body">
     <h1> <%= @post.name %> </h1>
     <p> Written on <%= @post.created_at %> </p>
-    <%= @post.body %>
+    <%= simple_format(@post.body) %>
     </br>
     <%= link_to "Edit this post", edit_post_path(@post) %>
     </br>
