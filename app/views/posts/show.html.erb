@@ -1,7 +1,10 @@
 <div class="container">
   <div class="post-body">
+     <div> <%= cl_image_tag @post.photo, crop: :fill %>
+     </div>
     <h1> <%= @post.name %> </h1>
     <p> Written on <%= @post.created_at %> </p>
+
     <%= simple_format(@post.body) %>
     </br>
     <%= link_to "Edit this post", edit_post_path(@post) %>

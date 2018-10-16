@@ -10,10 +10,7 @@
   </head>
 
   <body style="background-color: #3B3E44";>
-    <div class="navbar-wagon">
-    <div id="nicki"><h1>Nicki Hinz</h1></div>
-        <%= link_to "Add a new blog post", new_post_path %>
-    </div>
+
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

@@ -1,3 +1,13 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,50,50,5) 0%, rgba(8,36,61,0.6) 41%), url(<%= cl_image_path("Coffee") %>)">
+
+  <div class="banner-content">
+    <h1> Nicki Hinz </h1>
+    <p> Personal Blog </p>
+    <div class="new-black-button"> <%= link_to "Add a new blog post", new_post_path %> </div>
+  </div>
+</div>
+
+
   <div class="container">
     <div class="container-home">
     <ul class="card-holder">
@@ -5,7 +15,7 @@
       <%= link_to post_path(post) do %>
       <li class="card">
           <h3> <%= post.name %> </h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inventore vel quas laboriosam, debitis voluptas quasi. Magnam itaque, consequuntur, vero accusantium vitae asperiores dolore, repellendus possimus, perspiciatis necessitatibus quisquam veritatis! </p>
+          <%= cl_image_tag post.photo, height: 300, width: 300, crop: :fill unless post.photo.blank? %>
           <div> <%= post.created_at %> </div>
       </li>
         <% end %>
