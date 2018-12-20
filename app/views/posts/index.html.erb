@@ -22,4 +22,7 @@
       <% end %>
     </ul>
   </div>
+    <% if session[:current_user] %>
+      <li><%= link_to 'Log OUT', session_path('logout'), method: :delete %></li>
+    <% end %>
   </div>

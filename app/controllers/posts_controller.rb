@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def new
     authentication_required!
-    @user = User.all
+    # @user = User.all
     @post = Post.new
     render :new
   end
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def edit
     authentication_required!
-    @user = User.all
+    # @user = User.all
 
     set_post
     render :edit
