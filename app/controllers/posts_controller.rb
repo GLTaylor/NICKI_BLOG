@@ -5,7 +5,6 @@ class PostsController < ApplicationController
 
   def new
     authentication_required!
-    # @user = User.all
     @post = Post.new
     render :new
   end
@@ -22,8 +21,6 @@ class PostsController < ApplicationController
 
   def edit
     authentication_required!
-    # @user = User.all
-
     set_post
     render :edit
   end
@@ -35,9 +32,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    authentication_required!
+
     set_post
     @post.destroy
     redirect_to posts_path
+    render :destroy
   end
 
   private
