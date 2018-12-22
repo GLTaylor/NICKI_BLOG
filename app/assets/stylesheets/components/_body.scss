@@ -7,25 +7,36 @@
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #E9B898;
+  background-color: black;
   min-height: 100vh;
 }
 
 .container-home {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 0px;
+  padding-left: 15px;
   padding-top: 15px;
-  padding-right: 25px;
+  padding-right: 35px;
   padding-bottom: 15px;
   background-color: rgb(84, 85, 90);
   min-height: 100vh;
 }
 
 .post-body {
-  margin: 50px;
+  font-color: #242424;
+  // margin: 50px;
+  padding: 20px;
+  background-color: #FFFAF1;
+}
+.post-body a {
+  color: #aaaaaa;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 a:hover {
   color: #A2D729;
+}
+.post-body img {
+  margin-bottom: 20px;
 }

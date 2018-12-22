@@ -9,20 +9,19 @@
   </div>
 </div>
 
-
   <div class="container">
     <div class="container-home">
-    <ul class="card-holder">
+    <div class="card-holder">
       <% @posts.each do |post| %>
       <%= link_to post_path(post) do %>
-      <li class="card">
+      <div class="card">
           <h3> <%= post.name %> </h3>
           <%= cl_image_tag post.photo, height: 300, width: 300, crop: :fill unless post.photo.blank? %>
           <div> <%= post.created_at.strftime("%Y-%m-%d") %> </div>
-      </li>
+      </div>
         <% end %>
       <% end %>
-    </ul>
+    </div>
   </div>
     <% if session[:current_user] %>
       <li><%= link_to 'Log OUT', session_path('logout'), method: :delete %></li>

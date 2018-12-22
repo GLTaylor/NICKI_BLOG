@@ -1,26 +1,33 @@
 .card {
-  margin: 15px, 30px;
+  margin-bottom: 30px;
   padding: 10px;
   list-style-type: none;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   background-color: #f9f9f9;
   color: #969696;
 }
 
 .card-holder {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 25px;
-  grid-auto-flow: dense;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-column-gap: 20px;
+  // grid-row-gap: 25px;
+  // grid-auto-flow: dense;
   }
 
 .card h3 {
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
 }
 
-.card-holder a:nth-child(3n) {
-  grid-column-end: span 2;
-}
+// .card-holder a:nth-child(3n) {
+//   grid-column-end: span 2;
+// }
 
