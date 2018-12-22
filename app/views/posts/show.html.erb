@@ -3,14 +3,16 @@
      <div> <%= cl_image_tag @post.photo, crop: :fill %>
      </div>
     <h1> <%= @post.name %> </h1>
-    <p> Written on <%= @post.created_at %> </p>
+    <p> Written on <%= @post.created_at.strftime("%Y-%m-%d") %> </p>
 
     <%= simple_format(@post.body) %>
     </br>
-    <%= link_to "Edit this post", edit_post_path(@post) %>
-    </br>
-    <%= link_to "Delete this post", post_path(@post), method: :delete %>
-    </br>
+    <% if session[:current_user] %>
+      <%= link_to "Edit this post", edit_post_path(@post) %>
+      </br>
+      <%= link_to "Delete this post", post_path(@post), method: :delete %>
+      </br>
+    <% end %>
     <%= link_to "Back to the others", root_path %>
   </div>
 </div>

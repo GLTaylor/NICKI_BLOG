@@ -4,7 +4,7 @@
     <section>
       <div style="color: red;"><%= flash[:notice] if flash[:notice]  %></div>
 
-      <%= form_for @site_user, url: login_index_path do |f| %>
+      <%= form_for @site_user, url: sessions_path do |f| %>
         <div>
           <%= f.label :username %>
           <%= f.text_field :username %>

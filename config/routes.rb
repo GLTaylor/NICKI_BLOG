@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :login, only: [:create, :new]
+  resources :sessions, only: [:create, :new, :destroy], :path => "login"
 
   resources :posts
     root to: 'posts#index'
