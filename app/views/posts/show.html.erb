@@ -1,6 +1,6 @@
 <div class="container">
   <div class="post-body">
-     <div> <%= cl_image_tag @post.photo, crop: :fill %>
+     <div> <%= cl_image_tag @post.photo, height: 600, width: 600, crop: :fill %>
      </div>
     <h1> <%= @post.name %> </h1>
     <p> Written on <%= @post.created_at.strftime("%Y-%m-%d") %> </p>
