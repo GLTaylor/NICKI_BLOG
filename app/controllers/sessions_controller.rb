@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
     if @site_user.login_valid?
       session[:current_user] = true
-      redirect_to posts_path
+      redirect_to root_path
     else
       @site_user.password = nil
       flash[:notice] = 'Enter the correct credentials'
