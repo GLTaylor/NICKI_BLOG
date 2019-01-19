@@ -6,7 +6,7 @@
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
   </br>
-    <%= f.input :body, :as => :text, :input_html => { 'rows' => 10}, :required => true %>
+    <%= f.cktext_area :body, :as => :text, :input_html => { 'rows' => 10}, :required => true %>
   </div>
 
   <%= f.submit "Add this blog post", class: "new-black-button" %>

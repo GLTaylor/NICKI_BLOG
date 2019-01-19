@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+gem 'ckeditor', '~> 4.1.6'
 gem 'figaro'
+gem 'mini_magick'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
